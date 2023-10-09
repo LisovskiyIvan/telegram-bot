@@ -7,8 +7,7 @@ from aiogram.enums import ParseMode
 from utils.commands import set_commands
 from handlers.commandHandler import commandRouter
 from handlers.basicHandler import basicRouter
-
-TOKEN = '6370143841:AAG7aZXOrX3cHYBJqLCbabWv-2w44fl8a_k'
+from utils.config import TOKEN
 
   
 async def main() -> None:
