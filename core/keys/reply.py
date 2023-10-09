@@ -4,15 +4,15 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMar
 reply_keyboard = ReplyKeyboardMarkup(keyboard=[
     [
         KeyboardButton(
-            text='Рандомное аниме'
+            text='Случайное аниме'
         ),
         KeyboardButton(
-            text='Рандомная манга'
+            text='Случайная манга'
         )
     ],
     [
         KeyboardButton(
-            text='Правила'
+            text='Кто я?'
         )
     ]
 ], resize_keyboard=True, one_time_keyboard=True, input_field_placeholder='Выберите кнопку', selective=True)
@@ -23,17 +23,17 @@ archive_kb = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text='Архив 2', url='https://music.yandex.ru/home')]
 ])
 
-subjects = {
-    '1': 'Математика',
-    '2': 'Информатика',
-    '3': 'Ландшафтная архитектура'
-}
-
-rules = 'Тут будут правила:\n1. Первое правило клуба\n2. Второе правило клуба'
 
 random_anime_kb = ReplyKeyboardMarkup(keyboard=[
-    [KeyboardButton(text='Рандомное аниме')],
+    [KeyboardButton(text='Случайное аниме')],
     [KeyboardButton(text='Назад')]
 ],  resize_keyboard=True, one_time_keyboard=True)
 
-become_partner = 'А тут будут условия или контакты чтобы стать партнером'
+random_manga_kb = ReplyKeyboardMarkup(keyboard=[
+    [KeyboardButton(text='Случайная манга')],
+    [KeyboardButton(text='Назад')]
+],  resize_keyboard=True, one_time_keyboard=True)
+
+go_back_kb = ReplyKeyboardMarkup(keyboard=[
+    [KeyboardButton(text='Назад')]
+],  resize_keyboard=True, one_time_keyboard=True)
