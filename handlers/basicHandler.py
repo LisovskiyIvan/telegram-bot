@@ -130,9 +130,12 @@ async def get_manga(message: Message):
     await message.answer_photo(img)
     await message.answer(response, reply_markup=random_manga_kb)
     
-@basicRouter.message(F.text == 'Кто я?')
-async def get_rules(message: Message):
-    await message.answer("Привет! Меня зовут Канеки Кен бот, я ЕБАНУТЫЙ НА ГОЛОВУ СКОРОСТЬ УДАРИЛА В ГОЛОВУ и моя суть - это подсказать тебе случайное аниме или мангу. Надеюсь ты найдешь что-то интересное!", reply_markup=go_back_kb)
+@basicRouter.message(F.text == 'Угадать аниме по картинке')
+async def guess_anime(message: Message):
+  requests.post("https://api.trace.moe/search",
+  data=open("demo.jpg", "rb"),
+  headers={"Content-Type": "image/jpeg"}).json()
+  await message.answer("Привет! Меня зовут Канеки Кен бот, я ЕБАНУТЫЙ НА ГОЛОВУ СКОРОСТЬ УДАРИЛА В ГОЛОВУ и моя суть - это подсказать тебе случайное аниме или мангу. Надеюсь ты найдешь что-то интересное!", reply_markup=go_back_kb)
 
 @basicRouter.message(F.text == 'Назад')
 async def get_start(message: Message):

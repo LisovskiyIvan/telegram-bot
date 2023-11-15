@@ -12,7 +12,7 @@ reply_keyboard = ReplyKeyboardMarkup(keyboard=[
     ],
     [
         KeyboardButton(
-            text='Кто я?'
+            text='Угадать аниме по картинке'
         )
     ]
 ], resize_keyboard=True, one_time_keyboard=True, input_field_placeholder='Выберите кнопку', selective=True)
